@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu maker</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+
+    <!-- nabigation bar -->
+    <section class="has-background-success" style="padding: 8px;">
+
+        <div id="title_op" class="field" style="padding: 8px;">
+
+            <span class="title is-3 has-text-white" id="sp_rest_name">Your Resteraunt</span>
+            <button id="bt_edit_title" class="button  is-black" style="margin-left: 30px;">Edit</button>
+
+        </div>
+
+        <div id="title_ip" class="field has-addons" style="padding: 8px;">
+
+            <div class="control"><input id="et_rest_name" class="input" type="text" placeholder="Enter Resteraunt Name"> </div>
+            <div class="control"><button id="bt_save_title" class="button is-primary is-light">Save</button></div>
+
+        </div>
+
+    </section>
+
+    <!-- section table -->
+
+    <section id="section_table_group" class="section  columns is-multiline is-centered"></section>
+
+
+
+    <!-- editor  menu -->
+
+
+    <section id="section_editor" class="section  columns is-multiline is-centered">
+
+        <div class="column is-6 has-background-white-bis box " id="sec_form" style="margin: 16px;">
+            <div class="field control">
+                <label class="radio"><input id="rb_cat" type="radio" name="rg_type" value="val_category">Add acategory</label>
+                <label class="radio"><input id="rb_itm" type="radio" name="rg_type" value="val_item"> Add an item</label>
+            </div>
+    
+            <hr>
+    
+    
+            <div class="field" id="div_cat">
+                <label class="label">Category Name</label>
+                <div class="control">
+                    <input id="inp_cat_name" class="input" type="text" placeholder="Enter a new category name">
+                </div>
+            </div>
+    
+    
+            <div id="div_item">
+                <label class="label">Choose a category:</label>
+                <div id="div_catgroup" class="buttons">
+                    <button class="button is-rounded " name="tg_category" value="val_${cat}">${cat}</button>
+                </div>
+    
+                <div class="field">
+                    <label class="label">Item Name</label>
+                    <div class="control"><input class="input" type="text" placeholder="Enter a new item name"id="input_itemname"></div>
+                </div>
+    
+                <hr>
+    
+    
+                <div class="field control">
+                    <label class="radio"><input id="rb_single" type="radio" name="rg_price" value="val_single">SinglePrice</label>
+                    <label class="radio"><input id="rb_multi" type="radio" name="rg_price" value="val_multi"> MultiPrice</label>
+                </div>
+    
+    
+    
+                <div id="div_multiprice" class="columns is-multiline">
+    
+                    <div id="div_inp_half_p" class="column">
+                        <label class="label">Price For Half</label>
+                        <div class="control"><input class="input" type="number" placeholder="Half Price(&#8377;)"id="input_half_price"></div>
+                    </div>
+    
+                    <div id="div_inp_full_p" class="column">
+                        <label class="label">Full Price</label>
+                        <div class="control"><input class="input" type="number" placeholder="Full Price (&#8377;)"id="input_full_price"></div>
+                    </div>
+    
+                </div>
+    
+    
+    
+    
+            </div>
+    
+            <br>
+    
+            <div class="field control">
+                <button id="bt_submit" class="button  is-success ">Submit</button>
+            </div>
+    
+    
+    
+    
+    
+        </div>
+
+
+
+    </section>
+
+    <!-- print menu -->
+
+    <button id="bt_print_menu"    class="button is-primary  is-large is-fullwidth ">Save Menu As Pdf</button>
+    
+    <button id="bt_download_json" class="button is-danger  is-large is-fullwidth ">Download Current Menu JSON</button>
+
+</body>
+
+</html>
